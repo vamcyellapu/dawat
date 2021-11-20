@@ -30,14 +30,16 @@ body {
 
 h1,
 h2 {
-  color: var(--color-heading);
+  color: var(--color-primary);
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
   margin-bottom: 1rem;
+
 }
 
 h1 {
   font-size: 5rem;
+  margin-bottom: 5rem;
 }
 
 h2 {
@@ -60,7 +62,8 @@ p {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 6rem;
+    font-size: 9rem;
+
   }
 
   h2 {
@@ -212,3 +215,63 @@ a:focus {
 }
 
 /* Story */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.story__background {
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.story__body::first-letter {
+  float: left;
+  font-size: 10rem;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.story__body {
+  margin: 0 2rem;
+}
+
+.story__heading {
+  text-align: center;
+}
+
+.story__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story__content img {
+  margin-top: 4rem;
+  width: 200px;
+}
+
+.story__background {
+  position: relative;
+  bottom: 40px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .story__body {
+    columns: 2;
+    column-gap: 4rem;
+  }
+
+  .story__content img {
+    margin-top: 6rem;
+    width: 250px;
+  }
+
+  .story__background {
+    position: relative;
+    bottom: 100px;
+    z-index: -1;
+  }
+}
