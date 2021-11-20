@@ -69,3 +69,34 @@ a:hover,
 a:focus {
   color: #ff5e46;
 }
+
+/* Lists */
+.list {
+  list-style: none;
+}
+
+.list--dash {
+  list-style: '-  ';
+}
+
+.list--nav {
+  display: flex;
+
+}
+
+.list--nav .list__item {
+  padding: 4rem;
+  list-style: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .15s ease-out;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+
+
+.list--nav .list__item:hover {
+  color: var(--color-primary);
+  border-top: 2px solid var(--color-primary);
+
+}
