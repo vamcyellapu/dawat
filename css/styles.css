@@ -1,0 +1,71 @@
+:root {
+  --color-primary: #ca3d26;
+  --color-secondary: #fff;
+  --color-heading: #1e1e1f;
+  --color-body: #4a4d4f;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2rem;
+  line-height: 1.5;
+
+}
+
+h1,
+h2 {
+  color: var(--color-heading);
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+
+}
+
+a:hover,
+a:focus {
+  color: #ff5e46;
+}
