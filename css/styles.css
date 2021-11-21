@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  margin: 2rem;
+
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   color: var(--color-body);
   font-size: 2rem;
@@ -29,7 +29,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: var(--color-primary);
   font-family: 'Dancing Script', cursive;
   font-weight: 700;
@@ -207,9 +208,9 @@ a:focus {
 }
 
 /* Card */
-.card__header img {
-  width: 100%;
-}
+
+
+
 
 .card__body {
   padding: 1rem;
@@ -352,4 +353,78 @@ a:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+
+
+
+/* Chefs */
+
+.chefs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.chef-card {
+  width: 270px;
+
+}
+
+.chef__name {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: var(--color-body);
+  letter-spacing: 1px;
+}
+
+.chef-card .card__header {
+  position: relative;
+  height: 320px;
+
+}
+
+.chef-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.chef-card .list {
+  padding-left: 0;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  z-index: 1;
+
+
+}
+
+.chef-social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.card__header:hover .chef-social {
+  opacity: 1;
 }
