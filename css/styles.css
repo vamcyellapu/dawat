@@ -316,7 +316,7 @@ a:focus {
 /* Zig zag border */
 
 
-.zig-zag::after {
+.zig-zag-bottom {
   background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
   background-position: left bottom;
   background-repeat: repeat-x;
@@ -331,7 +331,7 @@ a:focus {
 
 }
 
-.zig-zag::before {
+.zig-zag-top {
   background: linear-gradient(-135deg, #ffffff 16px, transparent 0), linear-gradient(135deg, #ffffff 16px, transparent 0);
   background-position: left top;
   background-repeat: repeat-x;
@@ -341,6 +341,7 @@ a:focus {
   position: absolute;
   top: 0px;
   left: 0px;
+
   width: 100%;
   height: 25px;
 }
@@ -427,4 +428,10 @@ a:focus {
 
 .card__header:hover .chef-social {
   opacity: 1;
+}
+
+.gallery {
+  padding-bottom: 10rem;
+
+
 }
