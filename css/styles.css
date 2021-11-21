@@ -316,7 +316,7 @@ a:focus {
 /* Zig zag border */
 
 
-.zig-zag-bottom {
+.zig-zag::after {
   background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
   background-position: left bottom;
   background-repeat: repeat-x;
@@ -331,7 +331,7 @@ a:focus {
 
 }
 
-.zig-zag-top {
+.zig-zag::before {
   background: linear-gradient(-135deg, #ffffff 16px, transparent 0), linear-gradient(135deg, #ffffff 16px, transparent 0);
   background-position: left top;
   background-repeat: repeat-x;
@@ -339,9 +339,10 @@ a:focus {
   content: " ";
   display: block;
   position: absolute;
-  top: 0px;
-  left: 0px;
-
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 25px;
 }
@@ -432,6 +433,89 @@ a:focus {
 
 .gallery {
   padding-bottom: 10rem;
+  background-color: burlywood;
+  position: relative;
 
+}
 
+/* Footer */
+.footer {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/Footer\ background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(179, 179, 179);
+  text-align: center;
+}
+
+.footer .container {
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo {
+  margin: 10rem 0 5rem;
+}
+
+.footer .zig-zag::after {
+  background: none;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__email,
+.footer__tele {
+  color: var(--color-primary);
+}
+
+.footer__social .list {
+  padding-left: 0;
+}
+
+.footer__social .list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex-direction: column;
+}
+
+.footer__terms .list {
+  padding-left: 0;
+
+}
+
+.footer__terms li {
+  margin-right: 2rem;
+  color: var(--color-primary);
+}
+
+.footer__copyright p {
+  margin: 2rem 0;
+}
+
+.footer__dawat {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 900px) {
+  .footer__bottom {
+    flex-direction: row;
+  }
 }
